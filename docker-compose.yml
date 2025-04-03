@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  backend:
+    build:
+      context: backend
+      dockerfile: Dockerfile
+    container_name: demo-be
+    ports:
+      - '8080:8080'
+  frontend:
+    build:
+      context: frontend
+      dockerfile: Dockerfile
+    container_name: demo-fe
+    ports:
+      - '80:80'
